@@ -62,6 +62,13 @@ class _LayananState extends State<Layanan> {
               onpressed: () {},
               width: 339.0,
               height: 51.0,
+              icon: "user_edit",
+              text: "User Edit",
+            ),
+            CustomButton(
+              onpressed: () {},
+              width: 339.0,
+              height: 51.0,
               icon: "gear",
               text: "Pengaturan",
             ),

@@ -39,7 +39,10 @@ class _CustomButtonState extends State<CustomButton> {
             SizedBox(
               width: 15,
             ),
-            Image.asset("images/icon/${widget.icon}.png"),
+            Image.asset(
+              "images/icon/${widget.icon}.png",
+              color: greenColor,
+            ),
             SizedBox(
               width: 22.0,
             ),
