@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'dart:convert';
 import 'package:http/http.dart' as http;
 
+import 'form_edit.dart';
 import 'theme.dart';
 import 'utils/dompet_donasi.dart';
 import 'utils/layanan.dart';
@@ -41,6 +42,7 @@ class _SettingPageState extends State<SettingPage> {
         if (snapshot.connectionState == ConnectionState.done) {
           Map<String, dynamic> data =
               snapshot.data!.data() as Map<String, dynamic>;
+          String docId = snapshot.data!.id;
           return Scaffold(
             appBar: AppBar(
               backgroundColor: greenColor,
@@ -100,11 +102,25 @@ class _SettingPageState extends State<SettingPage> {
                                             ),
                                           ],
                                         ),
-                                        CircleAvatar(
-                                          backgroundImage: NetworkImage(
-                                            "${data['imageUrl']}",
+                                        GestureDetector(
+                                          onTap: () {
+                                            Navigator.push(
+                                              context,
+                                              MaterialPageRoute(
+                                                builder: (context) =>
+                                                    EditProfileForm(
+                                                  data: data,
+                                                  docId: docId,
+                                                ),
+                                              ),
+                                            );
+                                          },
+                                          child: CircleAvatar(
+                                            backgroundImage: NetworkImage(
+                                              "${data['imageUrl']}",
+                                            ),
+                                            radius: 45.0,
                                           ),
-                                          radius: 45.0,
                                         ),
                                       ],
                                     ),

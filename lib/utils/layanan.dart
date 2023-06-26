@@ -1,6 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import '../form_edit.dart';
 import '../login.dart';
 import '../theme.dart';
 import 'custom_button.dart';
@@ -57,13 +58,6 @@ class _LayananState extends State<Layanan> {
             Divider(
               thickness: 2.0,
               color: Color(0x0ffD2D2D2),
-            ),
-            CustomButton(
-              onpressed: () {},
-              width: 339.0,
-              height: 51.0,
-              icon: "user_edit",
-              text: "User Edit",
             ),
             CustomButton(
               onpressed: () {},

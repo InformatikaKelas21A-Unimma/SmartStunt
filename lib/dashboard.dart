@@ -91,6 +91,7 @@ class _DashboardPageState extends State<DashboardPage>
         if (snapshot.connectionState == ConnectionState.done) {
           Map<String, dynamic> data =
               snapshot.data!.data() as Map<String, dynamic>;
+
           return Scaffold(
             appBar: AppBar(
               toolbarHeight: 70,
