@@ -41,7 +41,7 @@ class _GrowcheckPageState extends State<GrowcheckPage> {
   }
 
   Future<void> fetchPrediction(List<num> inputData) async {
-    final apiUrl = 'http://10.0.2.2:5000/predict/stunting';
+    final apiUrl = 'https://meazzy.pythonanywhere.com/predict/stunting';
     final response = await http.post(
       Uri.parse(apiUrl),
       headers: {'Content-Type': 'application/json'},
